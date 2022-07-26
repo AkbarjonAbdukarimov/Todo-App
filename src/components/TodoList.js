@@ -25,14 +25,16 @@ class TodoList extends Component {
   render() {
     return (
       <div>
-        {this.state.todos.map((todo) => (
-          <Todo
-            key={todo.id}
-            id={todo.id}
-            task={todo.task}
-            delete={this.delete}
-          />
-        ))}
+        <ul>
+          {this.state.todos.map((todo) => (
+            <Todo
+              key={todo.id}
+              id={todo.id}
+              task={todo.task}
+              delete={this.delete}
+            />
+          ))}
+        </ul>
         <Form addTodo={this.addTodo} />
       </div>
     );

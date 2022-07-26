@@ -25,6 +25,7 @@ class Form extends Component {
             name="task"
             placeholder="Enter Task"
             onChange={this.handleChange}
+            value={this.state.task}
           />
           <button>Add</button>
         </form>

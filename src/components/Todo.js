@@ -11,11 +11,14 @@ class Todo extends Component {
   }
   render() {
     return (
-      <div>
-        <p>{this.props.task}</p>
+      <li>
+        <p className="item">{this.props.task}</p>
         {/* <button onClick={this.handleEdit}>Edit</button> */}
-        <button onClick={this.handleDelete}>X</button>
-      </div>
+        <div>
+          <i className="fa fa-pen"></i>
+          <i className="fa fa-trash" onClick={this.handleDelete}></i>
+        </div>
+      </li>
     );
   }
 }
