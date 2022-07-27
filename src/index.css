@@ -78,19 +78,11 @@ body {
   position: relative;
   transition: opacity 0.2s linear;
 }
-#todolist .done .label {
+#todolist .done {
   opacity: 0.6;
 }
-#todolist .done .label:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -0.5rem;
-  display: block;
-  width: 0%;
-  height: 1px;
-  background: #fff;
-  animation: strikeitem 0.3s ease-out 0s forwards;
+.done {
+  text-decoration: line-through;
 }
 #todolist .btn-picto {
   border: none;
