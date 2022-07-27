@@ -24,14 +24,14 @@ class TodoList extends Component {
       todos: this.state.todos.filter((todo) => todo.id !== id),
     });
   }
-  update(todo) {
+  async update(todo) {
     const updatedTodos = this.state.todos.map((t) => {
       if (t.id === todo.id) {
         return { task: todo.task, id: todo.id, status: todo.status };
       }
       return t;
     });
-    this.setState({ todos: updatedTodos });
+    await this.setState({ todos: updatedTodos });
   }
   toggleCompletion(id) {}
   render() {
